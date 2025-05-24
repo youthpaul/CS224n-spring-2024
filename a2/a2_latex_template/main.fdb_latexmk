@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1748009183.05907 "/mnt/c/Users/youthPaul/Desktop/CS224n/a2/a2_latex_template/main.tex" "main.pdf" "main" 1748009186.40019 0
-  "/mnt/c/Users/youthPaul/Desktop/CS224n/a2/a2_latex_template/main.tex" 1712676198 5780 e4ea20328b97e99a2302583f7f7c0ab8 ""
+["pdflatex"] 1748063964.5943 "/home/paul/cs224n/a2/a2_latex_template/main.tex" "main.pdf" "main" 1748063968.12722 0
+  "/home/paul/cs224n/a2/a2_latex_template/main.tex" 1712676198 5780 e4ea20328b97e99a2302583f7f7c0ab8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -277,12 +277,11 @@
   "dep_parses.tex" 1712676198 3041 ceeb222f2d16df528c23e109e4f18834 ""
   "example.png" 1712676198 111746 d5989e276dca79a0b2e5e84effcf2ff8 ""
   "macros.tex" 1712676198 660 0aa7caf33ddb384446099d7bcd0f954b ""
-  "main.aux" 1748009186.19566 3417 b53d2a2fe3c822dfba38c4591e42608e "pdflatex"
-  "main.out" 1748009184.61364 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1712676198 5780 e4ea20328b97e99a2302583f7f7c0ab8 ""
+  "main.aux" 1748063967.68689 3421 e75239d2b0e288417d538f61c615859f "pdflatex"
+  "main.out" 1748063966.02157 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "q1.tex" 1747995382.58505 13279 930669989e09533572286fa5511c403a ""
   "q2.tex" 1748009179.16355 7847 d6c1380504eb1c8df07b8819401efe82 ""
-  "q3.tex" 1712676198 18805 9d024c9480168d7e020016ecbd48b34c ""
+  "q3.tex" 1748063964.35173 23181 41d10ecbdf4daf0f76ce700d0bcc6f4c ""
   "std_macros.tex" 1712676198 11204 3ccbe10995adf29e39fb6e628340946b ""
   "submission.tex" 1712676198 514 ec4c5cdfe34eedb367d80bc0b40c3bc9 ""
   "word2vec.png" 1712676198 57482 4e86e40dc0521b52102d63df05b4a9fb ""

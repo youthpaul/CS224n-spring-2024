@@ -35,9 +35,42 @@ On each step, your parser will decide among the three transitions using a neural
     $[$ROOT, presented] & [my, findings, at, the, NLP, conference] & presented$\to$I &  \texttt{LEFT-ARC}  \\
     \end{tabular}\newline
     \end{adjustwidth}
+
+    % answer of Q3 (a)
+    \ifans{
+        \begin{adjustwidth}{-1.2cm}{}
+        \begin{tabular}{ p{4.2cm} | p{4.2cm} | l | l}
+        Stack & Buffer & New dependency & Transition \\ \hline
+        [ROOT] & [I, presented, my, findings, at, the, NLP, conference] &  & Initial Configuration \\
+        $[$ROOT, I] & [presented, my, findings, at, the, NLP, conference] &  &  \texttt{SHIFT}  \\
+        $[$ROOT, I, presented] & [my, findings, at, the, NLP, conference] &  &  \texttt{SHIFT}  \\
+        $[$ROOT, presented] & [my, findings, at, the, NLP, conference] & presented$\to$I &  \texttt{LEFT-ARC}  \\
+        $[$ROOT, presented, my] & [findings, at, the, NLP, conference] &  &  \texttt{SHIFT}  \\
+        $[$ROOT, presented, my, findings] & [at, the, NLP, conference] &  &  \texttt{SHIFT}  \\
+        $[$ROOT, presented, findings] & [at, the, NLP, conference] & findings$\to$my &  \texttt{LEFT-ARC}  \\
+        $[$ROOT, presented] & [at, the, NLP, conference] & presented$\to$findings &  \texttt{RIGHT-ARC}  \\
+        $[$ROOT, presented, at] & [the, NLP, conference] &  &  \texttt{SHIFT}  \\
+        $[$ROOT, presented, at, the] & [NLP, conference] &  &  \texttt{SHIFT}  \\
+        $[$ROOT, presented, at, the, NLP] & [conference] &  &  \texttt{SHIFT}  \\
+        $[$ROOT, presented, at, the, NLP, conference] & [] &  &  \texttt{SHIFT}  \\
+        $[$ROOT, presented, at, the, conference] & [] & conference$\to$NLP &  \texttt{LEFT-ARC}  \\
+        $[$ROOT, presented, at, conference] & [] & conference$\to$the &  \texttt{LEFT-ARC}  \\
+        $[$ROOT, presented, conference] & [] & conference$\to$at &  \texttt{LEFT-ARC}  \\
+        $[$ROOT, presented] & [] & presented$\to$conference &  \texttt{RIGHT-ARC}  \\
+        $[$ROOT] & [] & ROOT$\to$presented &  \texttt{RIGHT-ARC}  \\
+        \end{tabular}\newline
+        \end{adjustwidth}
+    }
     
     \part[2] A sentence containing $n$ words will be parsed in how many steps (in terms of $n$)? Briefly explain in 1--2 sentences why.
 
+    % answer of Q3 (b)
+    \ifans{
+        \newline
+        Each word is added to the stack once and removed once (like popping from a stack), resulting in $2n$ operations for a sentence with $n$ words. Therefore, the overall time complexity remains $O(n)$.
+        \newline
+        Note that \texttt{LEFT-ARC} removes the word second to the top of the stack.
+    }  
        
     
     \part[6] Implement the \texttt{\_\_init\_\_} and \texttt{parse\_step} functions in the \texttt{PartialParse} class in \texttt{parser\_transitions.py}. This implements the transition mechanics your parser will use. You can run basic (non-exhaustive) tests by running \texttt{python parser\_transitions.py part\_c}.
@@ -95,9 +128,63 @@ On each step, your parser will decide among the three transitions using a neural
     \begin{enumerate}[label=\roman*.]
     
         \item \textcolor{black}{Compute the derivative of $\bh = \relu(\bx \bW + \bb_1)$ with respect to $\bx$. For simplicity, you only need to show the derivative $\frac{\partial h_i}{\partial x_j}$ for some index $i$ and $j$. You may ignore the case where the derivative is not defined at 0.}
+
+        % answer of Q3 (e) i
+        \ifans{
+            \newline
+            we have to notice that $\bx$ is a $\mathbb{R}^{1 \times dm}$ matrix, since:
+            $$
+                \frac{\partial \operatorname{ReLU}(z)}{\partial z} = 
+                \begin{cases} 
+                1 & \text{if } z > 0, \\
+                0 & \text{otherwise}.
+                \end{cases}
+            $$
+            Linear component expansion:
+            $$
+                z = xW + b_{1} \Rightarrow z_{i} = \sum_{k} x_{k} W_{k,i} + b_{1,i}.
+            $$
+            where $W_{k,i}$ is the element at row $k$, column $i$ of the weight matrix $W$.
+            \newline
+            Using the Chain rule, we get:
+            $$
+                \frac{\partial h_{i}}{\partial x_{j}}=
+                \begin{cases} 
+                W_{j, i} & \text{if } \left(x W + b_{1}\right)_{i} > 0, \\
+                0 & \text{otherwise.}
+                \end{cases}
+            $$
+        }  
+
         \item \textcolor{black}{Recall in part 1b, we computed the partial derivative of $\bJ_{\text{naive-softmax}}(\bv_c, o, \bU)$. Likewise, please compute the partial derivative of $J(\theta)$ with respect to the $i$th entry of $\bl$, which is denoted as $\bl_i$. Specifically, compute $\frac{\partial CE(\by, \byt)}{\partial \bl_i}$, assuming that $\bl \in \R^3$, $\byt \in \R^3$, $\by \in \R^3$, and the true label is $c$. \\
         \textbf{Hints}: You may recall from part 1a, $\frac{\partial CE(\by, \byt)}{\partial \bl_i} = \sum_j \frac{\partial CE(\by, \byt)}{\partial \byt_j}\frac{\partial \byt_j}{\partial \bl_i}$, and $\frac{\partial CE(\by, \byt)}{\partial \byt_j}=0$ if $j \neq c$. 
         }
+
+        % answer of Q3 (e) ii
+        \ifans{
+            For $ \hat{y}_j = \frac{e^{l_j}}{\sum_{k=1}^3 e^{l_k}} $, the derivative $ \frac{\partial \hat{y}_j}{\partial l_i} $ is:
+            $$
+                \frac{\partial \hat{y}_j}{\partial l_i}=
+                \begin{cases}
+                    \hat{y}_i(1 - \hat{y}_i) & j = i \\
+                    -\hat{y}_i \hat{y}_j & j \neq i
+                \end{cases}
+            $$
+            Using Chain rule,
+            $$
+                \frac{\partial J}{\partial l_i} = \sum_{j=1}^3 \frac{\partial J}{\partial \hat{y}_j} \cdot \frac{\partial \hat{y}_j}{\partial l_i}
+            $$
+            Since $ \frac{\partial J}{\partial \hat{y}_j} = -\frac{y_j}{\hat{y}_j} $, and $ y_j $ is non-zero only when $ j = c $, this simplifies to:
+            $$
+                \frac{\partial J}{\partial l_i} = -\frac{1}{\hat{y}_c} \cdot \frac{\partial \hat{y}_c}{\partial l_i}
+            $$
+            Combining these results, the derivative is:
+            $$
+            \frac{\partial J}{\partial l_i} = \hat{y}_i - y_i
+            $$
+            where $ y_i $ is the one-hot encoded true label (1 if $ i = c $, 0 otherwise).
+        }
+
         \item We will use UAS score as our evaluation metric. UAS refers to Unlabeled Attachment Score, which is computed as the ratio between number of correctly predicted dependencies and the number of total dependencies despite of the relations (our model doesn't predict this).\newline
     
    In \texttt{parser\_model.py} you will find skeleton code to implement this simple neural network using PyTorch. Complete the \texttt{\_\_init\_\_}, \texttt{embedding\_lookup} and \texttt{forward} functions to implement the model. Then complete the \texttt{train\_for\_epoch} and \texttt{train} functions within the \texttt{run.py} file.

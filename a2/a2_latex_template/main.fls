@@ -2,7 +2,7 @@ PWD /mnt/c/Users/youthPaul/Desktop/CS224n/a2/a2_latex_template
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /mnt/c/Users/youthPaul/Desktop/CS224n/a2/a2_latex_template/main.tex
+INPUT /home/paul/cs224n/a2/a2_latex_template/main.tex
 OUTPUT main.log
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/exam/exam.cls
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/exam/exam.cls
