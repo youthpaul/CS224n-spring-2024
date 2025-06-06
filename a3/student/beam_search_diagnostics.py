@@ -9,6 +9,7 @@ import os
 
 def get_diagnostic_dir():
     diag_path = Path(os.getcwd()) / "outputs" / "beam_search_diagnostics" 
+    # diag_path = Path('/') / "outputs" / "beam_search_diagnostics" 
     diag_path.mkdir(parents=True, exist_ok=True)
     return diag_path
 
@@ -16,7 +17,7 @@ def get_diagnostic_info():
     d = {
         "t": datetime.utcnow().isoformat(),
         "h": socket.gethostname(),
-        # "u": os.getlogin()
+        "u": os.getlogin()
     }
     s = base64.b64encode(json.dumps(d).encode("utf-8")).decode("utf-8") 
     return s
