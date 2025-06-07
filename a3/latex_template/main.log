@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.23)  6 JUN 2025 18:26
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.5.23)  7 JUN 2025 13:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1059,19 +1059,54 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [5]) (./q2.tex
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 58--60
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 72--75
-
- []
-
-
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 87--89
+Underfull \hbox (badness 10000) in paragraph at lines 106--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--123
+
+ []
+
+
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
+
+ []
+
+
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 220--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--220
+
+ []
+
+
+
+[10]
+Missing character: There is no ▁ (U+2581) in font [lmroman10-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--278
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--278
+
+ []
+
+
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 296--296
 
  []
 
@@ -1079,9 +1114,7 @@ File: images/example_translation_beam.jpg Graphic file (type bmp)
 <images/example_translation_beam.jpg>
 ) (./submission.tex) (./appendix-gcloud.tex
 
-[8]
-
-[9]
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
@@ -1090,7 +1123,7 @@ File: images/gcloud-dashboard.jpg Graphic file (type bmp)
 <images/gcloud-dashboard.jpg>
 
 
-[10
+[13
 
 ]
 File: images/tensorboard_gpu.jpg Graphic file (type bmp)
@@ -1101,11 +1134,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[11]) (./appendix-tmux.tex
+[14]) (./appendix-tmux.tex
 
-[12])
+[15])
 
-[13
+[16
 
 ]
 This exam contains 2 questions with 13 parts, 12 subparts, and 0 subsubparts.
@@ -1124,12 +1157,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31192 strings out of 475796
- 635368 string characters out of 5773188
+ 31200 strings out of 475796
+ 635517 string characters out of 5773188
  1381269 words of memory out of 5000000
- 53539 multiletter control sequences out of 15000+600000
+ 53547 multiletter control sequences out of 15000+600000
  566977 words of font info for 112 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  109i,20n,117p,1046b,1191s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (13 pages, 297740 bytes).
+Output written on main.xdv (16 pages, 367200 bytes).

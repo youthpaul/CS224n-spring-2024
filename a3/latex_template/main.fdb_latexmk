@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1749205572.47261 "main.xdv" "main.pdf" "main" 1749205573.1073 0
-  "main.xdv" 1749205572.31978 297740 037dfd0f7f8e49d27ab92eda6193d6a2 "xelatex"
+["xdvipdfmx"] 1749272518.53492 "main.xdv" "main.pdf" "main" 1749272519.21834 0
+  "main.xdv" 1749272518.40561 367200 ed97d34cfb04afb19ecf974c046491b8 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1749205569.57103 "/home/paul/cs224n/a3/latex_template/main.tex" "main.xdv" "main" 1749205573.09583 0
+["xelatex"] 1749272515.90969 "/home/paul/cs224n/a3/latex_template/main.tex" "main.xdv" "main" 1749272519.20913 0
   "/home/paul/cs224n/a3/latex_template/main.tex" 1749176268 4095 2a1075ee4c91bb775a1f2aa418a5bdb0 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -207,10 +207,10 @@
   "images/tensorboard_cpu.jpg" 1749176268 119625 9c0900b0719a6d6be5865c94f010c851 ""
   "images/tensorboard_gpu.jpg" 1749176268 184464 a6f6ddac41acea47fd071e54a02fab90 ""
   "macros.tex" 1749176268 757 2e3af130c6e14d49b4be429690ec9686 ""
-  "main.aux" 1749205572.30872 7911 30451a3d35b7aa65c56bad07ae22012e "xelatex"
-  "main.out" 1749205571.58428 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "main.aux" 1749272518.39777 7933 997061797cdd0b84714579be68a91bdb "xelatex"
+  "main.out" 1749272517.73549 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
   "q1.tex" 1749205564.13421 15130 73a1e0f83a2510ce0457cdb0d9207de3 ""
-  "q2.tex" 1749176268 10621 5e5f55f2adeb63ae112c0a2f3850f50e ""
+  "q2.tex" 1749272514.59422 21210 38ec03dcbec9e9a98633bd4f708505fe ""
   "std-macros.tex" 1749176268 11204 3ccbe10995adf29e39fb6e628340946b ""
   "submission.tex" 1749176268 835 5146193f012aae37d2bdc2045e23d1f9 ""
   (generated)
