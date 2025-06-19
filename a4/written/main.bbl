@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{radford2018improving}
+{\sc Radford, A., Narasimhan, K., Salimans, T., and Sutskever, I.}
+\newblock Improving language understanding with unsupervised learning.
+\newblock {\em Technical report, OpenAI\/} (2018).
+
+\bibitem{raffel2020exploring}
+{\sc Raffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S., Matena, M., Zhou, Y., Li, W., and Liu, P.~J.}
+\newblock Exploring the limits of transfer learning with a unified text-to-text transformer.
+\newblock {\em Journal of Machine Learning Research 21}, 140 (2020), 1--67.
+
+\bibitem{su2024roformer}
+{\sc Su, J., Ahmed, M., Lu, Y., Pan, S., Bo, W., and Liu, Y.}
+\newblock Roformer: Enhanced transformer with rotary position embedding.
+\newblock {\em Neurocomputing 568\/} (2024), 127063.
+
+\end{thebibliography}
